@@ -7,3 +7,5 @@
 ```
 git push wlgit master:just_add_one_git_book_in_chinese 
 ```
+### a good note of optimize linux performance
+[click here](https://github.com/minhdanh/Linux-Kernel-Tuning-and-Hardening/blob/master/kernel_hardening_tuning.sh)
