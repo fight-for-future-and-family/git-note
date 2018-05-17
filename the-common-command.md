@@ -50,3 +50,22 @@ git reset bugFix
 ## remote
 git revert bugFix
 ```
+
+### 删除受git控制的文件
+##### 1. You want to keep the file locally
+Amend the last commit to remove the file from the repository, and add it to .gitignore, to prevent it from being added by accident again.
+```
+git rm --cached $FILE
+echo $FILE >> .gitignore
+git add .gitignore
+git commit --amend --no-edit
+git reflog expire --expire=now --all && git gc --prune=now --aggressive
+The git reflog expire and git gc commands force a garbage collection, to keep the file from dangling somewhere in your repository.
+```
+##### 2. You do not want to keep the file locally
+Just amend the last commit.
+```
+git rm $FILE
+git commit --amend --no-edit
+git reflog expire --expire=now --all && git gc --prune=now --aggressive
+```
