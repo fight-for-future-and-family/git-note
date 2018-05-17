@@ -38,6 +38,11 @@ doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
 
 #### 另外一种情况是,我们想把文件从 Git 仓库中删除(亦即从暂存区域移除),但仍然希望保留在当前工作目录中。
 >git rm --cached readme.txt
+#### 移动文件 -------  其实,运行就相当于运行了下面三条命令:
+>git mv file_from file_to
+ mv README.txt README
+ git rm README.txt
+ git add README
 
 git remote add wlgit git@github.com:fight-for-future-and-family/git-note.git
 
