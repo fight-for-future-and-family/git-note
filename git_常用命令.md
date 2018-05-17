@@ -69,7 +69,7 @@ git commit --amend -m "to modify the last commit"
 #### 取消已经暂存的文件
 >$ git reset HEAD benchmarks.rb  
 git reset --mixed HEAD git_常用命令.md
-#### checkout强调，替换
+#### checkout强调，替换  
 >git checkout [- -] filename 
 \- 用暂存区的内容替换工作区的文件。比如working directory修改了，但是想放弃这些修改，那么使用git checkout -- a.txt 放弃对a.txt的修改   
 git checkout head filename   
