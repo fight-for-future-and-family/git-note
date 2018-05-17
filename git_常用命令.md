@@ -62,6 +62,10 @@ git add README
 %cd 提交日期  
 %cr 提交日期,按多久以前的方式显示  
 %s 提交说明  
+git log --pretty=format:"%h %s" --graph
+
+#### 修改最后一次提交
+git commit --amend -m "to modify the last commit"
 
 git remote add wlgit git@github.com:fight-for-future-and-family/git-note.git
 
