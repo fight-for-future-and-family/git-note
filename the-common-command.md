@@ -19,7 +19,7 @@ git config --list
 格式：git config [–local|–global|–system] –unset section.key
      git config --unset my.name
 ```
-#### 忽略某些文件 ,创建一个名为 .gitignore 的文件   
+##### 忽略某些文件 ,创建一个名为 .gitignore 的文件   
 ```
 # 此为注释 – 将被 Git 忽略
 *.a # 忽略所有 .a 结尾的文件
@@ -28,6 +28,16 @@ git config --list
 build/ # 忽略 build/ 目录下的所有文件
 doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
 ```
+##### 要查看尚未暂存的文件更新了哪些部分,此命令比较的是工作目录中当前文件和暂存区域快照之间的差异,不加参数直接输入
+> git diff
+##### 若要看已经暂存起来的文件和上次提交时的快照之间的差异,
+> git diff --staged  /   git diff --cached
+
+#### 移除文件
+> git rm 命令完成此项工作,从暂存区域移除,并连带从工作目录中删除指定的文件
+
+#### 另外一种情况是,我们想把文件从 Git 仓库中删除(亦即从暂存区域移除),但仍然希望保留在当前工作目录中。
+>git rm --cached readme.txt
 
 git remote add wlgit git@github.com:fight-for-future-and-family/git-note.git
 
