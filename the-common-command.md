@@ -3,6 +3,9 @@ git init
 git config --system/--global/--local  --list
 git config --global user.name   "wangliang"
 git config --global user.email  "1010882388@qq.com"
+git config --global core.editor vim
+git config --global merge.tool vimdiff
+git config --list
 
 ## 使用git config命令编辑配置文件
 仓库级的config   git config –local -e
@@ -15,6 +18,15 @@ git config --global user.email  "1010882388@qq.com"
 ## 删除一个配置项
 格式：git config [–local|–global|–system] –unset section.key
      git config --unset my.name
+```
+### 忽略某些文件
+>创建一个名为 .gitignore 的文件
+# 此为注释 – 将被 Git 忽略
+*.a # 忽略所有 .a 结尾的文件
+!lib.a # 但 lib.a 除外
+/TODO # 仅仅忽略项目根目录下的 TODO 文件,不包括 subdir/TODO
+build/ # 忽略 build/ 目录下的所有文件
+doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
 
 git remote add wlgit git@github.com:fight-for-future-and-family/git-note.git
 
@@ -24,7 +36,7 @@ git commit -m "the changes of this time"
 git status
 git branch
 git log
-```
+
 ---
 #### the file is ~/.gitconfig
 ```
