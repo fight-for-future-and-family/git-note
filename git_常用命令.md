@@ -67,7 +67,7 @@ git log --pretty=format:"%h %s" --graph
 #### 修改最后一次提交
 git commit --amend -m "to modify the last commit"
 #### 取消已经暂存的文件
->$ git reset HEAD benchmarks.rb  
+> git reset HEAD benchmarks.rb  
 git reset --mixed HEAD git_常用命令.md
 #### checkout强调，替换  
 >git checkout [- -] filename  
